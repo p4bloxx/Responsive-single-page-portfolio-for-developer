@@ -1,0 +1,244 @@
+//TIPOGRAPHY
+@import url('../ASSETS/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+
+//Tipography
+$fs-12: 0.75rem;
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-24: 1.5rem;
+$fs-32: 2rem;
+$fs-40: 2.5rem;
+$fs-48: 3rem;
+$fs-72: 4.5rem;
+$fs-88: 5.5rem;
+
+$fw-med: 500;
+$fw-bld: 700;
+
+$letter-sp1: -1.5px;
+$letter-sp2: -2.5px;
+
+//Colors
+$black: rgb(21, 21, 21);
+$dark-grey: rgb(36, 36, 36);
+$light-grey: rgb(217, 217, 217);
+$white: rgb(240, 240, 240);
+$green: rgb(78, 225, 160);
+$red: rgb(255, 111, 91);
+
+//general reset
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  /* max-width: 100%; */
+  border: none;
+  outline: none;
+  background: none;
+  display: block;
+}
+
+::placeholder{
+  opacity: 0.5;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+//Components and Mixins
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between{
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-separator{
+  display: block;
+  height: 1px;
+  background-color: $white;
+  width: 100%;
+}
+
+button{
+  font-size: $fs-16;
+  color: $white;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2.286px;
+  line-height: 26px;
+  padding-bottom: 0.65rem;
+  position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      height: 2px;
+      background-color: $green;
+    }
+
+    &:hover::after{
+      animation: line 2s cubic-bezier(.13,1.05,.31,.8);
+    }
+
+    &:hover{
+      color: $green;
+    }
+}
+
+//Headline and titles projects section and contact
+.headline,
+h2{
+  font-size: $fs-40;
+  font-weight: 700;
+  letter-spacing: -1.136px;
+  line-height: 100%;
+
+  @media screen and (min-width: 48rem) {
+    font-size: $fs-72;
+    letter-spacing: -2.045px;
+  }
+
+  
+  @media screen and (min-width: 86rem) {
+    font-size: $fs-88;
+    letter-spacing: $letter-sp2;
+  }
+}
+
+h3{
+  font-size: $fs-32;
+  letter-spacing: -1px;
+  line-height: 125%; 
+
+    @media screen and (min-width: 48rem) {
+      font-size: $fs-48;
+      letter-spacing: $letter-sp1;
+      margin-block-end: 0.87rem;
+    }
+}
+
+h4{
+  font-size: $fs-24;
+  line-height: 2rem;
+  margin-block-end: 7px;
+}
+
+#green-line{
+  display: inline-block;
+  position: relative;
+}
+
+#green-line::after{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 4px;
+  background-color: $green;
+  width: 100%;
+  animation: line 2s cubic-bezier(.13,1.05,.31,.8);
+
+     @media screen and (min-width: 48rem) {
+       height: 6px;
+    } 
+}
+
+@keyframes line {
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 100%;
+  }
+}
+
+.logo{
+  font-size: $fs-24;
+  font-weight: 700;
+    @media screen and (min-width: 48rem) {
+      font-size: $fs-32;
+    }
+}
+
+body{
+  min-height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
+  color: $white;
+  background-color: $black;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 48rem) {
+  #hero-img-mob{
+    max-width: 10.87rem;
+  }
+
+  #hero-img-tab,
+  #hero-img-desk{
+    display: none;
+  }
+}
