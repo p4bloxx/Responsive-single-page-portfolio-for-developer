@@ -95,7 +95,7 @@ button::after {
   background-color: rgb(78, 225, 160);
 }
 button:hover::after {
-  animation: line 2s cubic-bezier(0.13, 1.05, 0.31, 0.8);
+  animation: line 1.3s cubic-bezier(0, 1.01, 0.71, 0.99);
 }
 button:hover {
   color: rgb(78, 225, 160);
@@ -155,7 +155,7 @@ h4 {
   height: 4px;
   background-color: rgb(78, 225, 160);
   width: 100%;
-  animation: line 2s cubic-bezier(0.13, 1.05, 0.31, 0.8);
+  animation: line 1.3s cubic-bezier(0, 1.01, 0.71, 0.99);
 }
 @media screen and (min-width: 48rem) {
   #green-line::after {
@@ -294,7 +294,7 @@ button::after {
   background-color: rgb(78, 225, 160);
 }
 button:hover::after {
-  animation: line 2s cubic-bezier(0.13, 1.05, 0.31, 0.8);
+  animation: line 1.3s cubic-bezier(0, 1.01, 0.71, 0.99);
 }
 button:hover {
   color: rgb(78, 225, 160);
@@ -354,7 +354,7 @@ h4 {
   height: 4px;
   background-color: rgb(78, 225, 160);
   width: 100%;
-  animation: line 2s cubic-bezier(0.13, 1.05, 0.31, 0.8);
+  animation: line 1.3s cubic-bezier(0, 1.01, 0.71, 0.99);
 }
 @media screen and (min-width: 48rem) {
   #green-line::after {
