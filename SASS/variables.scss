@@ -1,5 +1,9 @@
 //TIPOGRAPHY
-@import url('../ASSETS/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../ASSETS/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+  font-weight: 100 1000;
+}
 
 //Tipography
 $fs-12: 0.75rem;
